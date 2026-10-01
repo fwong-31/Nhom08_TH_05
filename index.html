@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lợi Ích Của Công Nghệ Số Trong Học Tập</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease-in-out, opacity 0.25s ease-in-out;
+            opacity: 0;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+            opacity: 1;
+        }
+        .custom-gradient-text {
+            background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card border-b border-slate-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-extrabold text-lg tracking-tight text-slate-900 block leading-tight">EduTech Digital</span>
+                    <span class="text-xs text-blue-600 font-medium">Kỷ Nguyên Giáo Dục Số</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#tong-quan" class="hover:text-blue-600 transition-colors">Tổng Quan</a>
+                <a href="#loi-ich" class="hover:text-blue-600 transition-colors">Ưu Điểm</a>
+                <a href="#infographic" class="hover:text-blue-600 transition-colors">Infographic</a>
+                <a href="#video" class="hover:text-blue-600 transition-colors">Video Minh Họa</a>
+                <a href="#faq" class="hover:text-blue-600 transition-colors">Hỏi & Đáp</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="#faq" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-600/20 active:scale-95 transition-all">
+                    Đặt Câu Hỏi
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="tong-quan" class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-blue-50/50 via-slate-50 to-slate-50">
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-100/80 border border-blue-200 text-blue-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    Chuyển đổi số giáo dục 4.0
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+                    Lợi Ích Của <span class="custom-gradient-text">Công Nghệ Số</span> Trong Học Tập
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+                    Trang web tổng hợp Infographic trực quan và Video sinh động về cách công nghệ mở ra chân trời tri thức mới, nâng cao hiệu quả và tính cá nhân hóa cho người học.
+                </p>
+
+                <!-- Quick Stats Badges -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-blue-600">24/7</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">Truy cập tri thức linh hoạt</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-indigo-600">100%</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">Học tập cá nhân hóa</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-purple-600">3x</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">Tăng tính tương tác</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="text-2xl sm:text-3xl font-extrabold text-teal-600">Toàn Cầu</div>
+                        <div class="text-xs text-slate-500 font-medium mt-1">Kết nối không khoảng cách</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Benefits Highlights Section -->
+        <section id="loi-ich" class="py-12 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Vì sao công nghệ là chìa khóa học tập hiện đại?</h2>
+                    <p class="text-slate-600 mt-2 text-sm sm:text-base">Các yếu tố đột phá giúp cải thiện hiệu suất ghi nhớ và trải nghiệm học tập.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Chủ Động Thời Gian & Địa Điểm</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Học sinh có thể xem lại bài giảng, nghiên cứu tài liệu bất cứ lúc nào và ở bất kỳ đâu chỉ với thiết bị kết nối Internet.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Trực Quan Hóa Tri Thức</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Hình ảnh Infographic, mô phỏng 3D và Video tương tác giúp biến những kiến thức phức tạp trở nên dễ hiểu và ghi nhớ lâu hơn.
+                        </p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center mb-5">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Tăng Tương Tác & Sáng Tạo</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Các công cụ AI, ứng dụng làm việc nhóm trực tuyến khơi gợi sự sáng tạo và phản hồi tức thì giữa giáo viên và học viên.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Showcase Section -->
+        <section class="py-16 bg-white border-y border-slate-200/60">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+                <!-- 1. Infographic Card Section -->
+                <div id="infographic" class="scroll-mt-28">
+                    <div class="flex flex-col lg:flex-row items-stretch gap-8 bg-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl overflow-hidden relative">
+                        <div class="absolute -right-10 -bottom-10 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                        <!-- Left Info Text -->
+                        <div class="lg:w-1/3 flex flex-col justify-between space-y-6 relative z-10">
+                            <div>
+                                <span class="inline-block px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-blue-400/30">
+                                    01. Trực Quan Hóa
+                                </span>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-snug">
+                                    Infographic Minh Họa
+                                </h2>
+                                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                                    Infographic tổng hợp các nét chính về vai trò của chuyển đổi số. Hình ảnh cô đọng giúp học sinh nắm bắt dữ liệu và luận điểm quan trọng trong thời gian ngắn nhất.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                                <p class="text-xs text-slate-400">💡 Mẹo nhỏ:</p>
+                                <p class="text-xs text-slate-200 mt-1">Bạn có thể nhấp vào nút dưới đây để phóng to hình ảnh hoặc xem chi tiết sắc nét hơn.</p>
+                                <button onclick="openModal('Lợi ích của công nghệ số.png')" class="mt-3 inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                    Phóng to hình ảnh
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Media Display -->
+                        <div class="lg:w-2/3 flex items-center justify-center bg-slate-950/60 rounded-2xl p-4 border border-slate-800 relative group overflow-hidden">
+                            <img src="Lợi ích của công nghệ số.png" 
+                                 alt="Infographic Lợi ích của công nghệ số" 
+                                 class="w-full max-h-[600px] object-contain rounded-xl shadow-lg transition-transform duration-500 group-hover:scale-[1.01]"
+                                 onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'py-16 text-center text-slate-400\'><svg class=\'w-16 h-16 mx-auto mb-3 text-slate-600\' fill=\'none\' stroke=\'currentColor\' viewBox=\'0 0 24 24\'><path stroke-linecap=\'round\' stroke-linejoin=\'round\' stroke-width=\'1.5\' d=\'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z\'></path></svg><p class=\'text-sm font-medium text-slate-300\'>File Infographic: <b>Lợi ích của công nghệ số.png</b></p><p class=\'text-xs text-slate-500 mt-1\'>Hãy đảm bảo file ảnh nằm cùng thư mục với trang web.</p></div>';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Video Section -->
+                <div id="video" class="scroll-mt-28">
+                    <div class="flex flex-col lg:flex-row-reverse items-stretch gap-8 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-900 rounded-3xl p-6 sm:p-10 text-white shadow-2xl overflow-hidden relative">
+                        <div class="absolute -left-10 -bottom-10 w-96 h-96 bg-indigo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+                        <!-- Right/Left Text -->
+                        <div class="lg:w-1/3 flex flex-col justify-between space-y-6 relative z-10">
+                            <div>
+                                <span class="inline-block px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-wider mb-4 border border-indigo-400/30">
+                                    02. Đa Phương Tiện
+                                </span>
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-white leading-snug">
+                                    Video Minh Họa Sinh Động
+                                </h2>
+                                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                                    Thước phim minh họa tác động thực tế của công nghệ số trong giảng dạy và tự học, giúp hình dung rõ nét về lớp học thông minh và tương lai giáo dục.
+                                </p>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold text-xs">MP4</div>
+                                    <p class="text-xs text-slate-300">Được sản xuất & biên tập mượt mà bằng CapCut.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Video Player Box -->
+                        <div class="lg:w-2/3 bg-slate-950/80 rounded-2xl p-2 sm:p-4 border border-slate-800 relative group flex items-center justify-center">
+                            <video controls class="w-full rounded-xl shadow-2xl max-h-[500px] bg-black">
+                                <source src="Video tạo bởi CapCut.mp4" type="video/mp4">
+                                Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive FAQ Section -->
+        <section id="faq" class="py-16 sm:py-24 bg-slate-50 scroll-mt-10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Giải Đáp Thắc Mắc</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Hỏi & Đáp Về Công Nghệ Số</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base">Các câu hỏi thường gặp nhất khi ứng dụng công nghệ vào học tập và giảng dạy.</p>
+
+                    <!-- Search Bar in FAQ -->
+                    <div class="mt-8 relative max-w-md mx-auto">
+                        <input type="text" id="faqSearch" onkeyup="filterFAQ()" placeholder="Tìm kiếm câu hỏi (ví dụ: AI, xao nhãng, giáo viên...)" 
+                               class="w-full pl-11 pr-4 py-3 rounded-2xl border border-slate-300 bg-white text-slate-800 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
+                        <svg class="w-5 h-5 text-slate-400 absolute left-4 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion Container -->
+                <div class="space-y-4" id="faqAccordion">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200">
+                        <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors">
+                            <span class="text-base sm:text-lg">1. Công nghệ số mang lại lợi ích lớn nhất gì cho học sinh?</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 transition-transform duration-300 icon-arrow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <div class="pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                                Lợi ích lớn nhất là khả năng **chủ động và cá nhân hóa lộ trình học**. Học sinh không còn bị giới hạn bởi không gian lớp học hay thời gian cố định. Thay vào đó, bạn có thể tiếp cận hàng triệu tài liệu, khóa học chất lượng cao, bài giảng trực quan bất cứ lúc nào, đồng thời nhận phản hồi ngay tức thì từ các ứng dụng thông minh.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200">
+                        <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors">
+                            <span class="text-base sm:text-lg">2. Làm thế nào để tránh xao nhãng khi học tập trực tuyến?</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 transition-transform duration-300 icon-arrow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <div class="pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                                Để nâng cao sự tập trung khi dùng máy tính hay điện thoại học tập, bạn có thể:
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Sử dụng các ứng dụng quản lý thời gian như Pomodoro (Forest, Focus To-Do).</li>
+                                    <li>Tắt thông báo ứng dụng mạng xã hội trong giờ học.</li>
+                                    <li>Tạo không gian học tập riêng biệt, ngăn cản tiếng ồn.</li>
+                                    <li>Lập danh sách mục tiêu ngắn cho mỗi buổi học (30 - 45 phút).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200">
+                        <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors">
+                            <span class="text-base sm:text-lg">3. Công nghệ số có thay đổi vai trò của người thầy không?</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 transition-transform duration-300 icon-arrow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <div class="pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                                Có, nhưng theo hướng tích cực. Công nghệ **không thay thế thầy cô**, mà chuyển vai trò của thầy cô từ *người truyền đạt kiến thức đơn thuần* sang *người hướng dẫn, định hướng và truyền cảm hứng*. Công nghệ giúp giảm tải công việc chấm điểm hay chuẩn bị tài liệu thủ công, để thầy cô tập trung hỗ trợ từng học sinh phát triển tư duy phản biện.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200">
+                        <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors">
+                            <span class="text-base sm:text-lg">4. Các công cụ AI (như ChatGPT, Canva AI) giúp ích gì trong việc học?</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 transition-transform duration-300 icon-arrow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <div class="pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                                Các công cụ Trí tuệ nhân tạo (AI) hỗ trợ giải thích khái niệm khó bằng ngôn ngữ đơn giản, gợi ý dàn ý bài viết, tạo sơ đồ tư duy, tìm kiếm tài liệu tham khảo và tự động hóa việc thiết kế bài trình chiếu chuyên nghiệp trong thời gian ngắn.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden transition-all duration-200">
+                        <button onclick="toggleAccordion(this)" class="w-full px-6 py-5 text-left font-semibold text-slate-900 flex items-center justify-between gap-4 hover:bg-slate-50/80 transition-colors">
+                            <span class="text-base sm:text-lg">5. Học sinh cần chuẩn bị kỹ năng gì để thích ứng với giáo dục số?</span>
+                            <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-600 flex items-center justify-center shrink-0 transition-transform duration-300 icon-arrow">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content px-6">
+                            <div class="pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                                Học sinh cần rèn luyện: **Tư duy phản biện** (biết chọn lọc nguồn thông tin chuẩn xác), **Kỹ năng tự học**, **An toàn trên không gian mạng** và **Khả năng sử dụng các công cụ phần mềm văn phòng/học tập cơ bản**.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No Results Warning -->
+                <div id="noResults" class="hidden text-center py-12 text-slate-500">
+                    <p class="text-base font-medium">Không tìm thấy câu hỏi nào phù hợp với từ khóa của bạn.</p>
+                </div>
+
+                <!-- Submit a Question Card -->
+                <div class="mt-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl">
+                    <div class="text-center max-w-xl mx-auto">
+                        <h3 class="text-xl font-bold">Bạn còn thắc mắc khác?</h3>
+                        <p class="text-xs sm:text-sm text-blue-100 mt-1">Gửi câu hỏi của bạn cho chúng tôi, đội ngũ EduTech sẽ phản hồi trong thời gian sớm nhất.</p>
+                    </div>
+                    <form onsubmit="handleFormSubmit(event)" class="mt-6 flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+                        <input type="text" id="userQuestion" required placeholder="Nhập câu hỏi của bạn..." 
+                               class="flex-1 px-4 py-3 rounded-xl text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-white">
+                        <button type="submit" class="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all shadow-md active:scale-95 shrink-0">
+                            Gửi Câu Hỏi
+                        </button>
+                    </form>
+                    <div id="submitSuccess" class="hidden text-center text-xs text-emerald-200 mt-3 font-medium">
+                        ✓ Câu hỏi của bạn đã được gửi thành công!
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-12 text-xs sm:text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
+                <!-- Col 1: Brand Info -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center gap-2 text-white font-bold text-base mb-3">
+                        <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-xs">ET</div>
+                        EduTech Vietnam
+                    </div>
+                    <p class="text-slate-400 leading-relaxed text-xs">
+                        Trang web kiến tạo môi trường minh họa thông tin giáo dục số hiện đại, trực quan và dễ tiếp cận cho cộng đồng người học Việt Nam.
+                    </p>
+                </div>
+
+                <!-- Col 2: University External Links -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm flex items-center gap-2">
+                        <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                        Liên Kết Đại Học
+                    </h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li>
+                            <a href="https://www.ctu.edu.vn/" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 text-slate-300 hover:text-blue-400 font-medium transition-colors group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:scale-125 transition-transform"></span>
+                                Trường Đại học Cần Thơ (CTU)
+                                <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cit.ctu.edu.vn/" target="_blank" rel="noopener noreferrer" 
+                               class="inline-flex items-center gap-2 text-slate-300 hover:text-indigo-400 font-medium transition-colors group">
+                                <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 group-hover:scale-125 transition-transform"></span>
+                                Trường CNTT & Truyền thông (CIT)
+                                <svg class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: AI & Media Sources -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm">Ghi Chú Nguồn & AI</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            Mã nguồn HTML/CSS/JS được hỗ trợ bởi AI.
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                            Infographic biên soạn qua Canva AI, Unsplash (CC0).
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
+                            Video được biên tập bằng phần mềm CapCut.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Copyright & License -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm">Giấy Phép Bản Quyền</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Nội dung được chia sẻ theo giấy phép 
+                        <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" class="text-blue-400 underline hover:text-blue-300">
+                            Creative Commons Attribution 4.0 International (CC BY 4.0)
+                        </a>.
+                    </p>
+                    <p class="text-xs text-slate-500 mt-4">© 2026 EduTech Project. Tất cả quyền được bảo lưu.</p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>Giao diện Slate & Indigo Gradient tích hợp Liên kết Đại học CTU & CIT.</p>
+                <a href="#tong-quan" class="hover:text-slate-300 transition-colors flex items-center gap-1">
+                    Trở về đầu trang ↑
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeModal()">
+        <div class="relative max-w-5xl w-full max-h-[90vh] flex items-center justify-center" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute -top-10 right-0 text-white hover:text-slate-300 text-sm font-semibold flex items-center gap-1">
+                ✕ Đóng (ESC)
+            </button>
+            <img id="modalImg" src="" alt="Zoomed view" class="max-w-full max-h-[85vh] rounded-2xl shadow-2xl object-contain">
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        function toggleAccordion(button) {
+            const item = button.parentElement;
+            const content = item.querySelector('.accordion-content');
+            const arrow = button.querySelector('.icon-arrow');
+            const isActive = content.classList.contains('active');
+
+            // Close all other accordions
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                c.classList.remove('active');
+            });
+            document.querySelectorAll('.icon-arrow').forEach(a => {
+                a.style.transform = 'rotate(0deg)';
+            });
+
+            if (!isActive) {
+                content.classList.add('active');
+                arrow.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function filterFAQ() {
+            const input = document.getElementById('faqSearch').value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+            let visibleCount = 0;
+
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(input)) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            const noResults = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const input = document.getElementById('userQuestion');
+            const successMsg = document.getElementById('submitSuccess');
+
+            if (input.value.trim() !== '') {
+                successMsg.classList.remove('hidden');
+                input.value = '';
+                setTimeout(() => {
+                    successMsg.classList.add('hidden');
+                }, 4000);
+            }
+        }
+
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modalImg.src = src;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close Modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
